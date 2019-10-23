@@ -5,20 +5,19 @@ import {
 		Col,
 		Tabs,
     	Layout,
-		message,
 		Icon,
 		Button,
 		Input,
 		Select,
 		Form,
-		Upload,		
+		Upload,	
+		Modal,	
   } from 'antd';
 import Phone from '../../images/Icons/phone.png';
 import Sms from '../../images/Icons/sms.png';
 import DarkEmail from '../../images/Icons/darkEmail.png';
 import arrowLeft from '../../images/Icons/arrow-left.png';
 import arrowRight from '../../images/Icons/arrow-right.png';
-import PhoneW from '../../images/sidebar/phone-white.png';
 import EmailGrey from '../../images/sidebar/email-grey.png';
 import ChatGrey from '../../images/sidebar/chat-grey.png';
 import ShareGrey from '../../images/sidebar/share-grey.png';
@@ -71,22 +70,7 @@ const data = [
       value: '3',
       label: '1-987-8468',
     },
-  ];
-  const email = [
-    {
-      value: '1',
-      placeholder: 'johndoe@gmail.com',
-    },
-    {
-      value: '2',
-      placeholder: 'smith@gmail.com',
-    },
-    {
-      value: '3',
-      placeholder: 'vanesa@gmail.com',
-    },
-  ];
-  
+  ];    
   const info = [
     {
       value: '1',
@@ -163,10 +147,8 @@ const data = [
 	  value: 'text',
 	  label: 'Template 3',
 	},
-  ];
-  
- 
-class Sidebar extends React.Component{
+  ];  
+ class Sidebar extends React.Component{
     constructor(props) {
         super(props);
         this.state = {
@@ -189,9 +171,9 @@ class Sidebar extends React.Component{
 			console.log(key);
 		}
 			
-    handleOk = e => {
+   handleOk = e => {
         console.log(e);
-        this.setState({visible:false})
+        this.setState({ visibleOutcomes: false });
       };
     
     sliderFunc = () => {
@@ -200,7 +182,7 @@ class Sidebar extends React.Component{
     
     handleCancel = e => {
         console.log(e);
-        this.setState({visible:false})
+        this.setState({ visibleOutcomes: false });
       };
     
     onSelectedIndex = id => {
@@ -215,8 +197,7 @@ class Sidebar extends React.Component{
 			}
 			this.setState({
 				status:index
-			})
-			// setStatus(index)
+			})			
 			this.onSelectedIndex(data[index].id)
 	
 		}
@@ -224,7 +205,6 @@ class Sidebar extends React.Component{
 			this.setState({
 				visibleOutcomes:true,
 				statusOutcomes:0
-
 			})
 		  }
 		goPrev = () => {
@@ -233,8 +213,7 @@ class Sidebar extends React.Component{
 			if (index < 0) {
 				index = data.length - 1
 			}
-			this.setState({status:index})
-			// setStatus(index)
+			this.setState({status:index})			
 			this.onSelectedIndex(data[index].id)
 	
 		}
@@ -245,7 +224,7 @@ class Sidebar extends React.Component{
 					<Row type="flex" justify="space-around" align="middle">
 						<Col xs={2} sm={4} md={6} lg={4} xl={4} xxl={4}>
 							<span onClick={this.goPrev}>
-								<img src={arrowLeft} />
+								<img alt='' src={arrowLeft} />
 							</span>
 						</Col>
 						<Col xs={20} sm={16} md={12} lg={16} xl={16} xxl={16}>
@@ -261,7 +240,7 @@ class Sidebar extends React.Component{
 								className="right-arrow"
 								onClick={this.goNext}
 							>
-								<img src={arrowRight} />
+								<img alt='' src={arrowRight} />
 							</span>
 						</Col>
 					</Row>
@@ -275,11 +254,7 @@ class Sidebar extends React.Component{
 			return(
 				<div className='mainDialer-wrapper'>
 					<Row>
-						<Col span={12}>
-							{/* <InputSelector
-								options={props.user}
-								selected={selectedOption}
-							/> */}
+						<Col span={12}>						
 							<InputGroup compact >
 							<Select
 								style={{ width: "100%" }}
@@ -311,119 +286,134 @@ class Sidebar extends React.Component{
 			)
 		}
 
-		Outcomes = ()=>{
-			return(
-				<div className="outcomes-wrapper">
-					<div className="outcomes">
-					<Row>
-						<Col span={14}>
-							<p className="text">Outcome</p>
-						</Col>
-						<Col span={10} >
-						<div className="btnOutcomes">
-							<Button
-							className="active-btn"
-							// onClick={() =>
-							// 	setInitialStats(setVisible, visible, setStatus, status)
-							// }
-							>
-							<img src={PlusImage} />
-							</Button>
-							<Button className="multi-btn" onClick={() => this.setState({statusOutcomes:1})}>
-							<img src={NoResponse} />
-							</Button>
-			
-							<Button className="multi-btn" onClick={() =>  this.setState({statusOutcomes:1})}>
-							<img src={Voicemail} />
-							</Button>
-							<Button className="connected-btn" onClick={() =>  this.setState({statusOutcomes:2})}>
-							<img src={Connected} />
-							</Button>
-						</div>
-						</Col>
-						{/* <DefaultModal
-						visible={visible}
-						handleOk={handleOk}
-						handleCancel={handleCancel}
-						/> */}
-					</Row>
-					</div>
-					<Row>
-					<Col span={24}>
-						{this.state.statusOutcomes == 1 && (
-						<div className="visible">
-							<Row>
-							<Col span={8}>
-								<p className="newText">New Action</p>
-							</Col>
-							<Col span={16}>
-								{/* <InputSelector
-								selected="Add to call queue"
-								options={template}
-								/> */}
-								 <InputGroup compact >
-									<Select
-									style={{ width: "100%" }}
-									defaultValue="Add to call queue"
-									size="large"
-									className='selector'
-									>
-									{template &&
-										template.map((item, index) => (
-										<Option key={index} value={item.value}>
-											{item.label}
-										</Option>
-										))}
-									</Select>
-								</InputGroup>
-							</Col>
-							</Row>
-						</div>
-						)}
-					</Col>
-					</Row>
-					<Row>
-					<Col span={24}>
-						{this.state.statusOutcomes == 2 && (
-						<div className="visible">
-							<Row>
-							<Col span={8}>
-								<p className="newText">Note</p>
-							</Col>
-							<Col span={16}>
-								<TextArea size="large" rows={4} />
-								{/* <DefaultButton name="Submit" /> */}
-								<Button className="btnStyle" type="primary"  size='large'>
-									Submit
-								</Button>
-							</Col>
-							</Row>
-						</div>
-						)}
-					</Col>
-					</Row>
-					<div className="finalAction">
-					<Row>
-						<Col span={9}>
-						<p className="text">Final Action</p>
-						</Col>
-						<Col span={15}>
-						<ButtonGroup className="btnGroup">
-							<Button size="large" type="primary">
-							<img className="img" src={Email} />
-							</Button>
-							<Button size="large">
-							<img className="img" src={Sms} />
-							</Button>
-							<Button size="large">
-							<img className="img" src={Divide} />
-							</Button>
-						</ButtonGroup>
-						</Col>
-					</Row>
-				</div>
-			  </div>
-			)
+		Outcomes = ()=>{        
+			return (
+        <div className="outcomes-wrapper">
+          <div className="outcomes">
+            <Row>
+              <Col span={14}>
+                <p className="text">Outcome</p>
+              </Col>
+              <Col span={10}>
+                <div className="btnOutcomes">
+                  <Button
+                    className="active-btn"
+                    onClick={() =>
+                      this.setState({ visibleOutcomes: true, statusOutcomes: 0 })
+                    }
+                  >
+                    <img src={PlusImage} />
+                  </Button>
+                  <Button
+                    className="multi-btn"
+                    onClick={() => this.setState({ statusOutcomes: 1 })}
+                  >
+                    <img src={NoResponse} />
+                  </Button>
+
+                  <Button
+                    className="multi-btn"
+                    onClick={() => this.setState({ statusOutcomes: 1 })}
+                  >
+                    <img src={Voicemail} />
+                  </Button>
+                  <Button
+                    className="connected-btn"
+                    onClick={() => this.setState({ statusOutcomes: 2 })}
+                  >
+                    <img src={Connected} />
+                  </Button>
+                </div>
+              </Col>
+              <Modal
+                title="Confirm Action"
+                visible={this.state.visibleOutcomes}
+                onOk={this.handleOk}
+                onCancel={this.handleCancel}
+                footer={[
+                  <Button key="back" onClick={this.handleCancel}>
+                    No
+                  </Button>,
+                  <Button key="submit" type="primary" onClick={this.handleOk}>
+                    Yes
+                  </Button>
+                ]}
+              >
+                <p>Are you sure to flag this number as a bad number</p>
+              </Modal>
+            </Row>
+          </div>
+          <Row>
+            <Col span={24}>
+              {this.state.statusOutcomes == 1 && (
+                <div className="visible">
+                  <Row>
+                    <Col span={8}>
+                      <p className="newText">New Action</p>
+                    </Col>
+                    <Col span={16}>
+                      <InputGroup compact>
+                        <Select
+                          style={{ width: "100%" }}
+                          defaultValue="Add to call queue"
+                          size="large"
+                          className="selector"
+                        >
+                          {template &&
+                            template.map((item, index) => (
+                              <Option key={index} value={item.value}>
+                                {item.label}
+                              </Option>
+                            ))}
+                        </Select>
+                      </InputGroup>
+                    </Col>
+                  </Row>
+                </div>
+              )}
+            </Col>
+          </Row>
+          <Row>
+            <Col span={24}>
+              {this.state.statusOutcomes == 2 && (
+                <div className="visible">
+                  <Row>
+                    <Col span={8}>
+                      <p className="newText">Note</p>
+                    </Col>
+                    <Col span={16}>
+                      <TextArea size="large" rows={4} />
+                      <Button className="btnStyle" type="primary" size="large">
+                        Submit
+                      </Button>
+                    </Col>
+                  </Row>
+                </div>
+              )}
+            </Col>
+          </Row>
+          <div className="finalAction">
+            <Row>
+              <Col span={9}>
+                <p className="text">Final Action</p>
+              </Col>
+              <Col span={15}>
+                <ButtonGroup className="btnGroup">
+                  <Button size="large" type="primary">
+                    <img className="img" src={Email} />
+                  </Button>
+                  <Button size="large">
+                    <img className="img" src={Sms} />
+                  </Button>
+                  <Button size="large">
+                    <img className="img" src={Divide} />
+                  </Button>
+                </ButtonGroup>
+              </Col>
+            </Row>
+          </div>
+        </div>
+      );
 		}
 
 		SidebatForm = () =>{
@@ -435,8 +425,7 @@ class Sidebar extends React.Component{
 					<div className="visible">
 					<Row>
 					<div className="visible">
-						<Col span={21}>
-						{/* <InputSelector options={template} selected="Daily Templete" /> */}
+						<Col span={21}>						
 						<InputGroup compact >
 							<Select
 							style={{ width: "100%" }}
@@ -488,8 +477,7 @@ class Sidebar extends React.Component{
 								</Button>
 								</Upload>
 							</Col>
-							<Col span={14}>
-								{/* <InputSelector options={file} selected="Select a file" /> */}
+							<Col span={14}>							
 								<InputGroup compact >
 									<Select
 										style={{ width: "100%" }}

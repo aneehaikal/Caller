@@ -15,15 +15,13 @@ export const Profile = () => (
       </p>
       <p className="p-new">New York, New york 500 </p>
       <div className="buttons">
-      <Button type="primary" className='btn'  size='large'>
-      Connect
-            </Button>
-        {/* <DefaultButton type="primary" name="Connect" /> */}
+        <Button type="primary" className='btn'  size='large'>
+          Connect
+        </Button>       
         <div className="custom-btn">
             <Button size='large'>
             More  ...
-            </Button>
-          {/* <DefaultButton name="More  ..." /> */}
+            </Button>    
         </div>
       </div>
     </div>

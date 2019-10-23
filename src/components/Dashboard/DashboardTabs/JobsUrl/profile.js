@@ -1,14 +1,13 @@
 import React from 'react';
-import { Card, Icon } from 'antd';
-// import { IconButton } from '../../Button/iconButton';
+import { Card, Icon, Button } from 'antd';
 import Bitmap from '../../../../images/Icons/bitmap.png'
 import '../../../../styles/dashboard.less';
 
 const Profile = () => {
   const { Meta } = Card;
   return (
-    <div className='JobUrlProfile'>
-      <Card className="card" cover={<img src={Bitmap} />} size="small" >
+    <div className="JobUrlProfile">
+      <Card className="card" cover={<img src={Bitmap} />} size="small">
         <Meta
           title="Java Developer"
           description={
@@ -18,17 +17,14 @@ const Profile = () => {
               </p>
               <p>
                 1 week ago.
-                  <span>
-                  <Icon type="clock-circle" /> Be among the first
-                  applicants
-                  </span>
+                <span>
+                  <Icon type="clock-circle" /> Be among the first applicants
+                </span>
               </p>
-              {/* <IconButton
-                name="Apply on company website"
-                type="primary"
-                size="large"
-                icon={<Icon type="export" />}
-              /> */}
+              <Button className="btnStyle" type="primary" size="large">
+                Apply on company website
+                <Icon type="export" />
+              </Button>             
             </div>
           }
         />

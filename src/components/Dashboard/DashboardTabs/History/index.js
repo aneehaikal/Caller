@@ -1,12 +1,10 @@
 import React, { Component, useState } from 'react';
-import { Table, Icon } from 'antd';
-import ArrowMissedCall from '../../../../images/Icons/arrow-missed-call.png';
+import { Table, Modal, Button } from 'antd';
 import rightArrow from '../../../../images/Table/right-arrow.png';
 import File from '../../../../images/Table/file.png';
 import playButton from '../../../../images/Table/play-button.png';
 import recievedCall from '../../../../images/Table/recieved-call.png';
 import MissedCall from '../../../../images/Table/missed-call.png';
-// import DefaultModal from '../../Modal';
 
 const Name = () => {
   return (
@@ -188,11 +186,22 @@ const History = () => {
         bordered
         className="table-ant"
       />
-      {/* <DefaultModal
+      <Modal
+        title="Confirm Action"
         visible={visible}
-        handleOk={handleOk}
-        handleCancel={handleCancel}
-      /> */}
+        onOk={handleOk}
+        onCancel={handleCancel}
+        footer={[
+          <Button key="back" onClick={handleCancel}>
+            No
+          </Button>,
+          <Button key="submit" type="primary" onClick={handleOk}>
+            Yes
+          </Button>
+        ]}
+      >
+        <p>Are you sure to flag this number as a bad number</p>
+      </Modal>     
     </div>
   );
 };

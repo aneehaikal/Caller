@@ -1,6 +1,5 @@
 import React from 'react';
 import { Avatar, Row, Col } from 'antd';
-// import { DefaultButton } from '../../Button';
 import { Profile } from './Profile';
 import { Information } from './information';
 import { Media } from './Media';

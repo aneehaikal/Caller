@@ -1,5 +1,5 @@
 import React from 'react';
-import { Avatar, Row, Col, Icon, Menu, Dropdown, Card,Descriptions,Tabs } from 'antd';
+import { Avatar, Row, Col, Menu, Dropdown, Card,Descriptions,Tabs } from 'antd';
 import {
     Chat,
     History,
@@ -8,7 +8,6 @@ import {
     Linkedn,
     JobsUrl,
   } from './DashboardTabs';
-// import Discription from './descriptions';
 import LinkedIn from '../../images/Profile/linkedin.png';
 import Twitter from '../../images/Profile/twitter.png';
 import Facebook from '../../images/Profile/fb.png';
@@ -113,8 +112,7 @@ class Dashboard extends React.Component{
                             src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"
                         />
                         </Col>
-                        <Col xs={6} sm={6} md={6} lg={20} xl={22} xxl={22}>
-                        {/* <Discription list={companyDetails} /> */}
+                        <Col xs={6} sm={6} md={6} lg={20} xl={22} xxl={22}>                       
                         <Descriptions
                             className="companyDetail"
                             title=""
@@ -147,107 +145,104 @@ class Dashboard extends React.Component{
                 </Card>
             </div>
             <div className="mainTab-wrapper">
-                <Row>
-                    <Col sm={20} md={22} lg={24} xl={24} xxl={24}>
-                    <Tabs
-                        className="tabLink main-tabs"
-                        defaultActiveKey="1"
-                        // onChange={this.callback}
+              <Row>
+                <Col sm={20} md={22} lg={24} xl={24} xxl={24}>
+                  <Tabs
+                    className="tabLink main-tabs"
+                    defaultActiveKey="1"
+                    // onChange={this.callback}
+                  >
+                    <TabPane
+                    key="1"
+                    tab={
+                        <div className="tab-content">
+                        <img src={Combinedshape} />
+                        </div>
+                    }
                     >
-                        <TabPane
-                        key="1"
-                        tab={
-                            <div className="tab-content">
-                            <img src={Combinedshape} />
-                            </div>
-                        }
-                        >
-                        <Chat />
-                        </TabPane>
-                        <TabPane
-                        tab="Tab 2"
-                        key="2"
-                        tab={
-                            <div className="tab-content">
-                            <img src={IndexIcon} />
-                            </div>
-                        }
-                        >
-                        <History />
-                        </TabPane>
-                        <TabPane
-                        tab="Tab 3"
-                        key="3"
-                        tab={
-                            <div className="tab-content">
-                            <img src={JobIcon} />
-                            </div>
-                        }
-                        >
-                        <Jobs />
-                        </TabPane>
-                        <TabPane
-                        tab="Tab 4"
-                        key="4"
-                        tab={
-                            <div className="tab-content">
-                            <img src={ContactIcon} />
-                            </div>
-                        }
-                        >
-                        <Contacts />
-                        </TabPane>
-                        <TabPane
-                        tab="Tab 5"
-                        key="5"
-                        tab={
-                            <div className="tab-content">
-                            <img src={NumberingIcon} />
-                            </div>
-                        }
-                        >
-                        <History />
-                        </TabPane>
-                        <TabPane
-                        tab="Tab 6"
-                        key="6"
-                        tab={
-                            <div className="tab-content">
-                            <img src={ClenderIcon} />
-                            </div>
-                        }
-                        >
-                        <History />
-                        </TabPane>
-                        <TabPane
-                        tab="Tab 7"
-                        key="7"
-                        tab={
-                            <div className="tab-content">
-                            <img src={AttachmentIcon} />
-                            </div>
-                        }
-                        >
-                        <JobsUrl />
-                        </TabPane>
-                        <TabPane
-                        tab="Tab 8"
-                        key="8"
-                        tab={
-                            <div className="tab-content">
-                            <img src={linkedinIcon} />
-                            </div>
-                        }
-                        >
-                        <Linkedn />
-                        </TabPane>
-                    </Tabs>
-                    </Col>
-                </Row>
-                </div>
-            {/* <Profile />
-            <MainTab /> */}
-
+                    <Chat />
+                    </TabPane>
+                    <TabPane
+                    tab="Tab 2"
+                    key="2"
+                    tab={
+                        <div className="tab-content">
+                        <img src={IndexIcon} />
+                        </div>
+                    }
+                    >
+                    <History />
+                    </TabPane>
+                    <TabPane
+                    tab="Tab 3"
+                    key="3"
+                    tab={
+                        <div className="tab-content">
+                        <img src={JobIcon} />
+                        </div>
+                    }
+                    >
+                    <Jobs />
+                    </TabPane>
+                    <TabPane
+                    tab="Tab 4"
+                    key="4"
+                    tab={
+                        <div className="tab-content">
+                        <img src={ContactIcon} />
+                        </div>
+                    }
+                    >
+                    <Contacts />
+                    </TabPane>
+                    <TabPane
+                    tab="Tab 5"
+                    key="5"
+                    tab={
+                        <div className="tab-content">
+                        <img src={NumberingIcon} />
+                        </div>
+                    }
+                    >
+                    <History />
+                    </TabPane>
+                    <TabPane
+                    tab="Tab 6"
+                    key="6"
+                    tab={
+                        <div className="tab-content">
+                        <img src={ClenderIcon} />
+                        </div>
+                    }
+                    >
+                    <History />
+                    </TabPane>
+                    <TabPane
+                    tab="Tab 7"
+                    key="7"
+                    tab={
+                        <div className="tab-content">
+                        <img src={AttachmentIcon} />
+                        </div>
+                    }
+                    >
+                    <JobsUrl />
+                    </TabPane>
+                    <TabPane
+                    tab="Tab 8"
+                    key="8"
+                    tab={
+                        <div className="tab-content">
+                        <img src={linkedinIcon} />
+                        </div>
+                    }
+                    >
+                    <Linkedn />
+                    </TabPane>
+                </Tabs>
+                </Col>
+              </Row>
+            </div>
         </div>
         )
 }
