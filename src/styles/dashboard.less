@@ -1,0 +1,421 @@
+.dashboard-wrapper {
+  background: #fff;
+  border: solid 1px #bbd6f5 !important;
+  border-radius: 0;
+  box-shadow: 0px 1px 3px rgba(125, 148, 109, 0.1);
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 5px !important;
+  border-bottom-right-radius: 5px;
+}
+.profile-wrapper {
+  .profilePic {
+    padding: 0 20px;
+  }
+  .companyDetail {
+    tr td {
+      padding-bottom: 0px;
+      .ant-descriptions-item-colon {
+        font-weight: 600;
+        color: #2a3d54 !important;
+      }
+      .ant-descriptions-item-colon::after {
+        content: "";
+      }
+      .links {
+        padding: 25px 0 0 0;
+        .link-desc {
+          padding: 0 13px 0 0;
+        }
+      }
+      span {
+        padding: 0 8px 0 0;
+        span {
+          padding: 0 5px 0 0;
+        }
+      }
+      .imgs {
+        padding: 0 15px 0 0;
+      }
+    }
+    .titleImg {
+      padding: 0 8px 0 0;
+    }
+  }
+  .profile-card {
+    background: transparent;
+  }
+  .avatar {
+    width: 60px;
+    height: 60px;
+  }
+  @media (min-width: 1200px) and (max-width: 1400px) {
+    tbody > tr:nth-child(2) > td:first-child > span {
+      display: inline-block;
+      margin-top: -16px;
+    }
+  }
+}
+.mainTab-wrapper {
+  background: #fff;
+  border-radius: 5px;
+  .tabLink {
+    .ant-tabs-bar {
+      margin: 0 0 16px 0;
+    }
+    .ant-tabs-nav,
+    .ant-tabs-nav-animated {
+      width: 100%;
+      border: 1px solid #d1e3f8;
+      .ant-tabs-ink-bar ant-tabs-ink-bar-animated {
+        width: 30px;
+      }
+    }
+    .ant-tabs-nav,
+    .ant-tabs-tab {
+      border-left: solid 1px #d1e3f8;
+    }
+    .ant-tabs-nav-wrap {
+      margin-bottom: 0px;
+    }
+    .ant-tabs-nav .ant-tabs-tab-active {
+      color: none !important;
+      background: #1b66de;
+    }
+    .ant-tabs-nav .ant-tabs-tab:hover {
+      color: none !important;
+    }
+    .ant-tabs-nav .ant-tabs-tab {
+      margin: 0;
+      padding: 0px 21.25px;
+    }
+    .ant-tabs-ink-bar {
+      background: transparent;
+    }
+    .ant-tabs-nav-wrap {
+      background: #f3f8fd;
+    }
+  }
+  .main-tabs {
+    .ant-tabs-nav > div {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      > .ant-tabs-tab {
+        width: 100%;
+        padding: 10px 0;
+        :first-child {
+          border-left: none;
+        }
+      }
+    }
+    .tab-content {
+      text-align: center;
+    }
+  }
+  table {
+    border-color: #d1e3f8 !important;
+    border-right: 1px solid #d1e3f8 !important;
+  }
+  .table-ant .ant-table-thead > tr > th .ant-table-header-column {
+    line-height: 1.7;
+    color: #2a3d54;
+    font-size: 14px;
+    font-weight: 400;
+  }
+  .table-content {
+    padding-left: 15px;
+  }
+  .table-icon {
+    width: 0px;
+    height: 0px;
+    padding: 0 6px;
+    border-radius: 50%;
+    background: #36b389;
+    margin-right: 10px;
+    img {
+      margin-bottom: 5px;
+    }
+  }
+  .missed-call {
+    width: 0px;
+    height: 0px;
+    padding: 0 3px;
+    border-radius: 50%;
+    background: #e6aa26;
+    margin-right: 10px;
+    img {
+      margin-bottom: 4px;
+    }
+  }
+  .table-ant .ant-table-bordered .ant-table-thead > tr > th,
+  .ant-table-bordered .ant-table-tbody > tr > td {
+    border-right: 0;
+  }
+}
+.linkedn-wrapper {
+  .outerBox {
+    border: 2px solid;
+    .header-images {
+      height: 150px;
+      background-image: url("../images/Dashboard/0.jpg");
+    }
+    .image {
+      position: absolute;
+      .ant-avatar {
+        width: 100px;
+        height: 100px;
+        top: -54px;
+        background: white;
+        left: 210px;
+        border: 2px solid;
+      }
+    }
+    .innerbox {
+      padding: 0px 25px;
+    }
+  }
+  @media (min-width: 1366px) {
+    .outerBox {
+      .image {
+        .ant-avatar {
+          left: 165px;
+        }
+      }
+    }
+  }
+  @media (min-width: 1600px) {
+    .outerBox {
+      .image {
+        .ant-avatar {
+          left: 284px;
+        }
+      }
+    }
+  }
+}
+
+.LinkednProfile {
+  .about-profile {
+    margin-top: 44px;
+    text-align: center;
+    .p-name {
+      font-size: 18px;
+      font-weight: 600;
+    }
+    .p-heading {
+      font-size: 14px;
+      font-weight: 500;
+      color: #2a3d54;
+      margin-bottom: 1px;
+    }
+    .p-about {
+      margin-bottom: 1px;
+    }
+    .p-new {
+      margin-bottom: 1px;
+    }
+    .buttons {
+      .btn {
+        width: 100%;
+      }
+      margin: 24px 0px;
+      display: flex;
+      justify-content: center;
+      .custom-btn {
+        margin-left: 10px;
+      }
+    }
+  }
+}
+
+.information-wrapper {
+  border-top: 1px solid #c2b9b9;
+  padding: 24px 0;
+}
+
+.media-wrapper {
+  position: relative;
+  .media {
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+    .images {
+      display: flex;
+    }
+    .images {
+      .slider1 {
+        img {
+          height: 200px;
+        }
+      }
+      .slider2 {
+        img {
+          height: 200px;
+          margin-left: 20px;
+        }
+      }
+    }
+  }
+}
+.jobUrl-wrapper {
+  padding: 18px 24px;
+}
+
+.JobUrlProfile {
+  .card {
+    padding: 24px 24px 0 24px;
+    width: 65%;
+    box-shadow: 0px 4px 8px rgba(125, 148, 174, 0.1);
+    border-radius: 5px;
+    border: solid 1px #bbd6f5;
+    .ant-card-cover > * {
+      width: fit-content;
+    }
+    .ant-card-body {
+      padding: 24px 0;
+    }
+    .cardContent {
+      .address {
+        margin-bottom: 4px;
+        color: rgb(24, 144, 255);
+        span {
+          color: rgba(0, 0, 0, 0.45);
+        }
+      }
+      .anticon {
+        color: #29bf1d;
+        margin-left: 6px;
+        svg {
+          margin-bottom: 3px;
+        }
+      }
+      .anticon {
+        color: white;
+        font-size: 13px;
+      }
+      .ant-btn span {
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+.skills-wrapper {
+  padding: 10px 0px;
+  width: 65%;
+  ul {
+    padding-left: 23px;
+  }
+}
+
+.Responsibilty-wrapper {
+  width: 65%;
+  .para {
+    color: rgba(0, 0, 0, 0.65);
+    font-size: 14px;
+  }
+  .responsibility {
+    margin-top: 15px;
+    span {
+      color: #88838385;
+      font-weight: 400;
+    }
+    .job-level {
+      font-weight: 500;
+      font-size: 14px;
+      padding-top: 5px;
+    }
+  }
+}
+.chat-wrapper {
+  padding: 0 10px 70px 10px;
+  border-bottom: 1px solid #d1e3f8;
+  .message {
+    font-size: 24px;
+    font-weight: 400;
+  }
+  .chatbot-custom {
+    .right-div {
+      position: relative;
+      text-align: -webkit-right;
+    }
+    .right-icon {
+      position: relative;
+      top: 8px;
+      img {
+        padding: 0 0 0 12px;
+      }
+    }
+    .right-item {
+      border-radius: 6px;
+      background: #1b66de;
+      color: #ffffff;
+      max-width: 483px;
+      text-align: left;
+      padding: 11px 12px;
+      margin-top: 10px;
+    }
+    .right-item::after {
+      content: "";
+      position: absolute;
+      right: 0px;
+      bottom: 12px;
+      width: 0;
+      height: 0;
+      border-top: 20px solid #1b66de;
+      border-left: 20px solid transparent;
+    }
+    .helo-bot {
+      position: relative;
+      padding: 9px;
+    }
+    .chat-img {
+      position: relative;
+      padding: 0 12px 0 0;
+    }
+    .inner-bot {
+      margin-top: 18px;
+      span {
+        border-radius: 6px;
+        background: #ebf7f3;
+        max-width: 200px;
+        text-align: left;
+        padding: 11px 12px;
+      }
+    }
+    .inner-bot::before {
+      content: "";
+      position: absolute;
+      bottom: 46px;
+      left: 9px;
+      width: 0;
+      height: 0;
+      border-bottom: 20px solid #ebf7f3;
+      border-right: 20px solid transparent;
+    }
+  }
+}
+.chatBtns {
+  padding: 24px 16px;
+  background: #f3f8fd;
+  .btn {
+    width: 100%;
+    border: solid 1px #bbd6f5;
+    color: #1b66de;
+  }
+  .btnprmy {
+    width: 100%;
+  }
+  .top {
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .selector {
+    color: #1b66de;
+    .ant-select-selection {
+      border-color: #bbd6f5 !important;
+    }
+  }
+}

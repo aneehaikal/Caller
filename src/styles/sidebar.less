@@ -1,0 +1,233 @@
+.slider-wrapper {
+  background: #ffffff;
+  margin-bottom: 16px;
+
+  .slider-content {
+    text-align: center !important;
+    .slider-header {
+      margin-bottom: 0;
+      color: #2a3d54;
+      font-size: 20px;
+      font-weight: 400;
+    }
+  }
+  .right-arrow {
+    float: right;
+  }
+}
+.customTab-wrapper {
+  .tabLink {
+    .ant-tabs-bar {
+      margin: 0 0 16px 0;
+    }
+    .ant-tabs-nav,
+    .ant-tabs-nav-animated {
+      width: 100%;
+      border: 1px solid #d1e3f8;
+      border-radius: 5px;
+      .ant-tabs-ink-bar ant-tabs-ink-bar-animated {
+        width: 30px;
+      }
+    }
+    .ant-tabs-nav,
+    .ant-tabs-tab {
+      border-left: solid 1px #d1e3f8;
+    }
+    .ant-tabs-nav-wrap {
+      margin-bottom: 0px;
+    }
+    .ant-tabs-nav .ant-tabs-tab-active {
+      color: none !important;
+      background: #1b66de;
+    }
+    .ant-tabs-nav .ant-tabs-tab:hover {
+      color: none !important;
+    }
+    .ant-tabs-nav .ant-tabs-tab {
+      margin: 0;
+      padding: 0px 21.25px;
+    }
+    .ant-tabs-ink-bar {
+      background: transparent;
+    }
+    .ant-tabs-nav-wrap {
+      background: #f3f8fd;
+    }
+  }
+  .sidebar-tabs {
+    .ant-tabs-nav > div {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      > .ant-tabs-tab {
+        width: 100%;
+        padding: 5px 0;
+        :first-child {
+          border-bottom-left-radius: 5px;
+          border-top-left-radius: 5px;
+          border-left: none;
+        }
+      }
+      > .ant-tabs-tab-active {
+        :last-child {
+          border-top-right-radius: 5px;
+          border-bottom-right-radius: 5px;
+        }
+
+        p {
+          color: white;
+          font-size: 14px;
+          font-family: monospace;
+        }
+      }
+      p {
+        color: #46678c;
+        font-size: 14px;
+        font-family: monospace;
+        margin-bottom: 0 !important;
+      }
+    }
+    .tab-content {
+      text-align: center;
+    }
+  }
+}
+.mainDialer-wrapper {
+  position: relative;
+  background: #f3f8fd;
+  border-radius: 0 50px 48px 14px;
+  margin-bottom: 16px;
+  .dialer-img {
+    margin-left: 12px;
+  }
+  .phone-icon {
+    margin-top: 8px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    box-shadow: -1px 2px 15px 0px #72c9ac;
+    float: right;
+    background: #3bc880;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    text-align: center;
+    padding: 6px;
+    i {
+      font-size: 20px;
+      color: white;
+    }
+  }
+}
+.outcomes-wrapper {
+  .outcomes {
+    margin-bottom: 16px;
+    .text {
+      color: rgba(0, 0, 0, 0.65);
+      font-size: 14px;
+      margin: 8px 0;
+      float: left;
+    }
+    .btnOutcomes {
+      display: flex;
+      justify-content: space-between;
+      button {
+        border: none;
+      }
+      .active-btn {
+        background: #cc3d3d;
+        width: 37px;
+        height: 37px;
+        img {
+          margin-left: -4px;
+        }
+      }
+      .multi-btn {
+        border: 1px solid #d1e3f8;
+        width: 37px;
+        height: 37px;
+        img {
+          margin-left: -10px;
+        }
+      }
+      .connected-btn {
+        border: 1px solid #d1e3f8;
+        width: 37px;
+        height: 37px;
+        img {
+          margin-left: -5px;
+          margin-top: -5px;
+        }
+      }
+    }
+  }
+  .visible {
+    margin-bottom: 16px;
+    .ant-input {
+      border: solid 1px #bbd6f5;
+    }
+    .newText {
+      color: #2a3d54;
+      line-height: 35px;
+    }
+    .btnStyle {
+      margin-top: 10px;
+    }
+  }
+
+  .finalAction {
+    margin-bottom: 16px;
+    .text {
+      margin: 8px 0;
+      float: left;
+    }
+    .btnGroup {
+      float: right;
+      button {
+        padding: 0 19px;
+      }
+    }
+  }
+}
+
+.selector .ant-select-selection {
+  border: solid 1px #bbd6f5;
+  margin-bottom: 16px;
+}
+.siderbarForm-wrapper {
+  .form {
+    margin-bottom: 16px;
+    .imgComp {
+      padding: 8px 12px;
+      float: right;
+    }
+    .btn {
+      border: solid 1px #bbd6f5;
+      color: #1b66de;
+    }
+    .visible {
+      margin-bottom: 16px;
+      .addon .ant-input-group-addon:first-child {
+        border: solid 1px #bbd6f5;
+        background: #d1e3f8;
+        width: 18%;
+      }
+      .ant-input-group > .ant-input:last-child,
+      .ant-input-group-addon:last-child {
+        border: solid 1px #bbd6f5;
+      }
+      form textarea.ant-input {
+        border: solid 1px #bbd6f5;
+      }
+      .attach {
+        width: 140px;
+        height: 40px;
+        border: solid 1px #e8f1fb !important;
+        background: #e8f1fb !important;
+        color: #1b66de;
+      }
+      .btnStyle {
+        border: solid 1px #bbd6f5;
+      }
+    }
+  }
+}
