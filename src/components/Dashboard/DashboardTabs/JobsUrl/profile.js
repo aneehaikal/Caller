@@ -7,7 +7,7 @@ const Profile = () => {
   const { Meta } = Card;
   return (
     <div className="JobUrlProfile">
-      <Card className="card" cover={<img src={Bitmap} />} size="small">
+      <Card className="card" cover={<img alt='' src={Bitmap} />} size="small">
         <Meta
           title="Java Developer"
           description={

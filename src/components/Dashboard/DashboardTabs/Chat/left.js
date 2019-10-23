@@ -11,7 +11,7 @@ export function ChatbotLeft(props) {
             <div className="helo-bot" key={index}>
               {' '}
               <span className="chat-img">
-                <img src={item.img} />
+                <img alt='' src={item.img} />
               </span>
               {item.name}
               <div className="inner-bot">
@@ -25,7 +25,7 @@ export function ChatbotLeft(props) {
                 <span className="message">{item.text}</span>{' '}
               </div>{' '}
               <span className="right-icon">
-                {item.name} <img src={item.img} />
+                {item.name} <img alt='' src={item.img} />
               </span>{' '}
             </div>
           ),

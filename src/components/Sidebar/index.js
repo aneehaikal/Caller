@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import {
 		Row,
 		Col,
@@ -153,15 +152,14 @@ const data = [
         super(props);
         this.state = {
             visible:false,
-            status:false,
+            status:0,
             listDetail:[
                 { name: '12', img: Phone, active: true },
                 { name: ' 6', img: DarkEmail, active: false },
                 { name: '4', img: Sms, active: false },
             ],
             sliderStatus:0,
-			userStatus:0,
-			status:0,
+			userStatus:0,			
 			visibleOutcome:false,
 			statusOutcomes:false,
         };
@@ -186,7 +184,7 @@ const data = [
       };
     
     onSelectedIndex = id => {
-        const index = data.findIndex(i => i.id == id);
+        const index = data.findIndex(i => i.id === id);
         this.setState({userStatus:index})
 			};
 		goNext = () => {
@@ -224,7 +222,7 @@ const data = [
 					<Row type="flex" justify="space-around" align="middle">
 						<Col xs={2} sm={4} md={6} lg={4} xl={4} xxl={4}>
 							<span onClick={this.goPrev}>
-								<img alt='' src={arrowLeft} />
+								<img alt='' alt='' src={arrowLeft} />
 							</span>
 						</Col>
 						<Col xs={20} sm={16} md={12} lg={16} xl={16} xxl={16}>
@@ -240,7 +238,7 @@ const data = [
 								className="right-arrow"
 								onClick={this.goNext}
 							>
-								<img alt='' src={arrowRight} />
+								<img alt='' alt='' src={arrowRight} />
 							</span>
 						</Col>
 					</Row>
@@ -250,7 +248,7 @@ const data = [
 
 		MainDailer = () =>{
 			const selectedOption =
-    		Array.isArray(phoneOne) && phoneOne[this.state.status].label;
+			Array.isArray(phoneOne) && phoneOne[this.state.status].label;
 			return(
 				<div className='mainDialer-wrapper'>
 					<Row>
@@ -258,7 +256,7 @@ const data = [
 							<InputGroup compact >
 							<Select
 								style={{ width: "100%" }}
-								defaultValue={selectedOption}
+								value={selectedOption}
 								size="large"
 								className='selector'
 								>
@@ -273,7 +271,7 @@ const data = [
 						</Col>
 						<Col span={6}>
 							<span className="dialer-img">
-								<img src={dialerIcon} />
+								<img alt='' src={dialerIcon} />
 							</span>
 						</Col>
 						<Col span={6}>
@@ -302,26 +300,26 @@ const data = [
                       this.setState({ visibleOutcomes: true, statusOutcomes: 0 })
                     }
                   >
-                    <img src={PlusImage} />
+                    <img alt='' src={PlusImage} />
                   </Button>
                   <Button
                     className="multi-btn"
                     onClick={() => this.setState({ statusOutcomes: 1 })}
                   >
-                    <img src={NoResponse} />
+                    <img alt='' src={NoResponse} />
                   </Button>
 
                   <Button
                     className="multi-btn"
                     onClick={() => this.setState({ statusOutcomes: 1 })}
                   >
-                    <img src={Voicemail} />
+                    <img alt='' src={Voicemail} />
                   </Button>
                   <Button
                     className="connected-btn"
                     onClick={() => this.setState({ statusOutcomes: 2 })}
                   >
-                    <img src={Connected} />
+                    <img alt='' src={Connected} />
                   </Button>
                 </div>
               </Col>
@@ -375,7 +373,7 @@ const data = [
           </Row>
           <Row>
             <Col span={24}>
-              {this.state.statusOutcomes == 2 && (
+              {this.state.statusOutcomes === 2 && (
                 <div className="visible">
                   <Row>
                     <Col span={8}>
@@ -400,13 +398,13 @@ const data = [
               <Col span={15}>
                 <ButtonGroup className="btnGroup">
                   <Button size="large" type="primary">
-                    <img className="img" src={Email} />
+                    <img alt='' className="img" src={Email} />
                   </Button>
                   <Button size="large">
-                    <img className="img" src={Sms} />
+                    <img alt='' className="img" src={Sms} />
                   </Button>
                   <Button size="large">
-                    <img className="img" src={Divide} />
+                    <img alt='' className="img" src={Divide} />
                   </Button>
                 </ButtonGroup>
               </Col>
@@ -443,7 +441,7 @@ const data = [
 						</InputGroup>
 						</Col>
 						<Col span={3}>
-						<img className="imgComp" src={Compose} />
+						<img alt='' className="imgComp" src={Compose} />
 						</Col>
 					</div>
 					</Row>
@@ -473,7 +471,7 @@ const data = [
 							<Col span={10}>
 								<Upload name="logo" action="/upload.do" listType="picture">
 								<Button className="attach">
-									<img src={Attach} /> Attach
+									<img alt='' src={Attach} /> Attach
 								</Button>
 								</Upload>
 							</Col>
@@ -499,17 +497,17 @@ const data = [
 						<div>
 							<Row gutter={16} type="flex" justify="space-between">
 							<Col span={7}>
-								<Button className="btnStyle" type="primary"  size='large'>
+								<Button type="primary" className="btn"  size='large'>
 								Send Now
 								</Button>
 							</Col>
 							<Col span={7}>
-								<Button className="btnStyle"   size='large'>
+								<Button className="btn btnStyle"   size='large'>
 									Send Later
 								</Button>
 							</Col>
 							<Col span={10}>
-									<Button className="btnStyle"   size='large'>
+									<Button className="btn btnStyle"   size='large'>
 										Send at Best time
 									</Button>
 							</Col>
@@ -543,7 +541,7 @@ const data = [
 									key="1"
 									tab={
 										<div className="tab-content">
-											<img src={Phone} />
+											<img alt='' src={Phone} />
 											<p className="first-p">Phone</p>
 										</div>
 									}
@@ -567,7 +565,7 @@ const data = [
 									key="2"
 									tab={
 										<div className="tab-content">
-											<img src={EmailGrey} alt="newimage" />
+											<img alt='' src={EmailGrey} alt="newimage" />
 											<p>Email</p>
 										</div>
 									}
@@ -587,7 +585,7 @@ const data = [
 									key="3"
 									tab={
 										<div className="tab-content">
-											<img src={SmsGrey} />
+											<img alt='' src={SmsGrey} />
 											<p>SMS</p>
 										</div>
 									}
@@ -629,7 +627,7 @@ const data = [
 									key="4"
 									tab={
 										<div className="tab-content">
-											<img src={ChatGrey} />
+											<img alt='' src={ChatGrey} />
 											<p>Chat</p>
 										</div>
 									}
@@ -641,7 +639,7 @@ const data = [
 									key="5"
 									tab={
 										<div className="tab-content">
-											<img src={ShareGrey} />
+											<img alt='' src={ShareGrey} />
 											<p>Share</p>
 										</div>
 									}

@@ -1,4 +1,4 @@
-import React, { Component, useState } from 'react';
+import React, { useState } from 'react';
 import { Table, Modal, Button } from 'antd';
 import rightArrow from '../../../../images/Table/right-arrow.png';
 import File from '../../../../images/Table/file.png';
@@ -11,7 +11,7 @@ const Name = () => {
     <div>
       <span>Amy Jhon</span>
       <span className="table-content">
-        <img src={rightArrow} />
+        <img alt='' src={rightArrow} />
       </span>{' '}
     </div>
   );
@@ -20,11 +20,11 @@ const Status = () => {
   return (
     <div>
       <span className="table-icon">
-        <img src={recievedCall} />
+        <img alt='' src={recievedCall} />
       </span>
       Connected
       <span className="table-content">
-        <img src={rightArrow} />
+        <img alt='' src={rightArrow} />
       </span>{' '}
     </div>
   );
@@ -34,11 +34,11 @@ const StatusWith = () => {
   return (
     <div>
       <span className="missed-call">
-        <img src={MissedCall} />
+        <img alt='' src={MissedCall} />
       </span>
       Connected
       <span className="table-content">
-        <img src={rightArrow} />
+        <img alt='' src={rightArrow} />
       </span>{' '}
     </div>
   );
@@ -50,7 +50,7 @@ const DateTime = () => {
       12/12/2019 | 03:45 PM{' '}
       <span className="table-content">
         {' '}
-        <img src={rightArrow} />
+        <img alt='' src={rightArrow} />
       </span>{' '}
     </div>
   );
@@ -63,18 +63,18 @@ const Type = ({ setVisible, visible, setStatus }) => {
       Phone OutBound{' '}
       <span className="table-content">
         {' '}
-        <img src={rightArrow} />
+        <img alt='' src={rightArrow} />
       </span>
       <span className="table-content">
         {' '}
-        <img src={File} />
+        <img alt='' src={File} />
       </span>
       <span
         className="table-content"
         onClick={() => setInitialStatss(setVisible, visible, setStatus)}
       >
         {' '}
-        <img src={playButton} />
+        <img alt='' src={playButton} />
       </span>
     </div>
   );
@@ -86,7 +86,7 @@ const TypeWithoutIcon = () => {
       Phone InBound{' '}
       <span className="table-content">
         {' '}
-        <img src={rightArrow} />
+        <img alt='' src={rightArrow} />
       </span>
     </div>
   );

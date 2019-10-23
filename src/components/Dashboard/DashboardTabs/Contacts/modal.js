@@ -1,4 +1,4 @@
-import React, { memo, useState } from 'react';
+import React from 'react';
 import { Modal, Button, Row, Col, Form, Input } from 'antd';
 
 function DefaultModal(props) {
@@ -52,4 +52,4 @@ function DefaultModal(props) {
 
 DefaultModal.propTypes = {};
 
-export default memo(DefaultModal);
+export default DefaultModal;

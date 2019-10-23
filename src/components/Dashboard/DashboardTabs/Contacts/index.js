@@ -8,7 +8,7 @@ const Name = () => {
     <div>
       <span>Jhon Doe</span>
       <span className="table-content">
-        <img src={rightArrow} />
+        <img alt='' src={rightArrow} />
       </span>{' '}
     </div>
   );
@@ -18,7 +18,7 @@ const Title = () => {
     <div>
       <span>Amy Jhon</span>
       <span className="table-content">
-        <img src={rightArrow} />
+        <img alt='' src={rightArrow} />
       </span>{' '}
     </div>
   );
@@ -29,7 +29,7 @@ const Phone = () => {
     <div>
       99-999-9999
       <span className="table-content">
-        <img src={rightArrow} />
+        <img alt='' src={rightArrow} />
       </span>{' '}
     </div>
   );
@@ -41,7 +41,7 @@ const Connected = () => {
       12/12/2019 | 03:45 PM{' '}
       <span className="table-content">
         {' '}
-        <img src={rightArrow} />
+        <img alt='' src={rightArrow} />
       </span>{' '}
     </div>
   );
@@ -57,7 +57,7 @@ const Add = ({ setVisible, visible, setStatus }) => {
 };
 
 
-function setInitialStatss(setVisible, visible, setStatus) {
+function setInitialStatss(setVisible) {
   setVisible(true);
 }
 
@@ -106,7 +106,7 @@ const Contacts = () => {
   const [status, setStatus] = useState(false);
 
   const handleOk = e => {
-    console.log(e);
+    console.log(setStatus);
     setVisible(false);
   };
 
